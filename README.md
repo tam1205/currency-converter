@@ -19,7 +19,7 @@ A lightweight currency conversion app using live exchange rates.
 - React 18
 - TypeScript
 - Vite
-- Frankfurter API (free, no API key required)
+- Open Exchange Rates API via open.er-api.com (free, no API key required)
 
 ## Architecture
 

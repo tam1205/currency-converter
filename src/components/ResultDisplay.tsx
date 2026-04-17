@@ -1,4 +1,3 @@
-import React from "react";
 import { Status } from "../types";
 import "./ResultDisplay.css";
 
@@ -11,7 +10,14 @@ interface Props {
   error: string | null;
 }
 
-export function ResultDisplay({ status, amount, from, to, result, error }: Props) {
+export function ResultDisplay({
+  status,
+  amount,
+  from,
+  to,
+  result,
+  error,
+}: Props) {
   if (status === "idle") return null;
 
   if (status === "loading") {
@@ -35,7 +41,9 @@ export function ResultDisplay({ status, amount, from, to, result, error }: Props
   if (status === "success" && result !== null) {
     return (
       <div className="result result--success">
-        <p className="result-label">{amount} {from} =</p>
+        <p className="result-label">
+          {amount} {from} =
+        </p>
         <p className="result-value">
           {result.toFixed(2)} <span className="result-currency">{to}</span>
         </p>

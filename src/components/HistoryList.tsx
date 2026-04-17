@@ -1,4 +1,3 @@
-import React from "react";
 import { HistoryEntry } from "../types";
 import "./HistoryList.css";
 
@@ -16,12 +15,18 @@ export function HistoryList({ history }: Props) {
         {history.map((entry) => (
           <li key={entry.id} className="history-item">
             <div className="history-left">
-              <span className="history-pair">{entry.from} → {entry.to}</span>
+              <span className="history-pair">
+                {entry.from} → {entry.to}
+              </span>
               <span className="history-date">{entry.date}</span>
             </div>
             <div className="history-right">
-              <span className="history-amount">{entry.amount.toLocaleString()} {entry.from}</span>
-              <span className="history-result">= {entry.result.toFixed(2)} {entry.to}</span>
+              <span className="history-amount">
+                {entry.amount.toLocaleString()} {entry.from}
+              </span>
+              <span className="history-result">
+                = {entry.result.toFixed(2)} {entry.to}
+              </span>
             </div>
           </li>
         ))}

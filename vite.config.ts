@@ -4,13 +4,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/currency-converter/",
-  server: {
-    proxy: {
-      "/api": {
-        target: "https://api.frankfurter.app",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
-  },
 });

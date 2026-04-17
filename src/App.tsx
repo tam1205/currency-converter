@@ -1,4 +1,3 @@
-import React from "react";
 import { useConverter } from "./hooks/useConverter";
 import { ConverterForm } from "./components/ConverterForm";
 import { ResultDisplay } from "./components/ResultDisplay";
@@ -6,11 +5,15 @@ import { HistoryList } from "./components/HistoryList";
 
 export default function App() {
   const {
-    amount, setAmount,
-    from, setFrom,
-    to, setTo,
+    amount,
+    setAmount,
+    from,
+    setFrom,
+    to,
+    setTo,
     result,
-    status, error,
+    status,
+    error,
     currencies,
     history,
     convert,
@@ -21,7 +24,7 @@ export default function App() {
     <div className="app">
       <header className="header">
         <h1>Currency converter</h1>
-        <p>Live rates via frankfurter.app</p>
+        <p>Live rates via open.er-api.com</p>
       </header>
       <main className="main">
         <div className="card">
