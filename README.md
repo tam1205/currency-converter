@@ -8,7 +8,7 @@ A lightweight currency conversion app using live exchange rates.
 
 ## Features
 
-- Live exchange rates via the frankfurter.app API
+- Live exchange rates via open.er-api.com
 - 30+ currencies supported
 - Swap button to instantly reverse conversion direction
 - Loading and error states handled gracefully

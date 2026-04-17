@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HistoryEntry, Status } from "../types";
-import { fetchConversion, fetchCurrencies } from "../api/frankfurter";
+import { fetchConversion, fetchCurrencies } from "../api/exchangeRates";
 
 export function useConverter() {
   const [amount, setAmount] = useState<string>("100");
@@ -37,7 +37,17 @@ export function useConverter() {
       setResult(converted);
       setStatus("success");
       setHistory((prev) =>
-        [{ id: Date.now(), from, to, amount: parsedAmount, result: converted, date: data.date }, ...prev].slice(0, 8)
+        [
+          {
+            id: Date.now(),
+            from,
+            to,
+            amount: parsedAmount,
+            result: converted,
+            date: data.date,
+          },
+          ...prev,
+        ].slice(0, 8),
       );
     } catch {
       setError("Failed to fetch conversion. Please try again.");
@@ -54,11 +64,15 @@ export function useConverter() {
   }
 
   return {
-    amount, setAmount,
-    from, setFrom,
-    to, setTo,
+    amount,
+    setAmount,
+    from,
+    setFrom,
+    to,
+    setTo,
     result,
-    status, error,
+    status,
+    error,
     currencies,
     history,
     convert,
