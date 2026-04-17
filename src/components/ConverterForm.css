@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.field label {
+  font-size: 12px;
+  color: #868e96;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.field input,
+.field select {
+  padding: 9px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #212529;
+  background: white;
+  outline: none;
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #adb5bd;
+}
+
+.swap-btn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #495057;
+  flex-shrink: 0;
+  margin-bottom: 1px;
+}
+
+.swap-btn:hover { background: #e9ecef; }
+
+.convert-btn {
+  width: 100%;
+  padding: 11px;
+  background: #212529;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.convert-btn:hover:not(:disabled) { background: #343a40; }
+
+.convert-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
