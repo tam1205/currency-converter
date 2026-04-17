@@ -1,5 +1,7 @@
 # Currency Converter
 
+![App screenshot](screenshot.png)
+
 A lightweight currency conversion app using live exchange rates.
 
 ## Live demo
